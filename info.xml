@@ -2,7 +2,7 @@
 <extension key="com.joineryhq.hideactivitytypes" type="module">
   <file>hideactivitytypes</file>
   <name>Hide Activity Types</name>
-  <description></description>
+  <description/>
   <license>AGPL-3.0</license>
   <maintainer>
     <author>Allen Shaw</author>
@@ -18,13 +18,21 @@
   <version>1.0.2</version>
   <develStage>stable</develStage>
   <compatibility>
-    <ver>5.x</ver>
+    <ver>5.51</ver>
   </compatibility>
   <comments>Developed by Allen Shaw (allen@joineryhq.com) and Eli Lisseck (lisseck@gmail.com) for Joinery and YEA.</comments>
   <classloader>
     <psr4 prefix="Civi\" path="Civi"/>
+    <psr0 prefix="CRM_" path="."/>
   </classloader>
   <civix>
     <namespace>CRM/Hideactivitytypes</namespace>
+    <format>25.10.2</format>
   </civix>
+  <upgrader>CiviMix\Schema\Hideactivitytypes\AutomaticUpgrader</upgrader>
+  <mixins>
+    <mixin>smarty-v2@1.0.3</mixin>
+    <mixin>entity-types-php@2.0.0</mixin>
+    <mixin>scan-classes@1.0.0</mixin>
+  </mixins>
 </extension>
